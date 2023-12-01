@@ -20,7 +20,7 @@ class PcmUtilActivity : AppCompatActivity(), View.OnClickListener {
     private var playPath: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.pcm_util_activity)
         val path = filesDir.absolutePath + File.separator + "temp.wav"
         audioUtil = AudioUtil(this, path, object : AudioCallBack {
             override fun onRecordAudioErr(msg: String?) {
