@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
@@ -8,9 +8,8 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.exa.pcmutil"
-        minSdk 28
-        targetSdk 33
+        minSdk 24
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -45,9 +44,6 @@ android {
             path file('src/main/cpp/CMakeLists.txt')
             version '3.22.1'
         }
-    }
-    buildFeatures {
-        viewBinding true
     }
 }
 

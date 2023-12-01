@@ -13,4 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "PcmUtil"
-include ':app'
+include ':pcmlib'
+include ':test'

@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.children
-import com.exa.pcmutil.databinding.ActivityMainBinding
 import com.exa.pcmutil.util.AudioCallBack
 import com.exa.pcmutil.util.AudioPlayerUtil
 import com.exa.pcmutil.util.AudioUtil
@@ -17,14 +16,11 @@ import java.io.File
 
 class PcmUtilActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var binding: ActivityMainBinding
     private lateinit var audioUtil: AudioUtil
     private var playPath: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
         val path = filesDir.absolutePath + File.separator + "temp.wav"
         audioUtil = AudioUtil(this, path, object : AudioCallBack {
             override fun onRecordAudioErr(msg: String?) {
