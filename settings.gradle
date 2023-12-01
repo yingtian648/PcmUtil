@@ -15,4 +15,3 @@ dependencyResolutionManagement {
 rootProject.name = "PcmUtil"
 include ':pcmlib'
 include ':test'
-include ':mylibrary'
